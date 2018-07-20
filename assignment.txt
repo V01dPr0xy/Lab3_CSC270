@@ -15,7 +15,7 @@ Admin:
     -Edit content for each page in a user-friendly manner without ever having to mess with code
     -Alter look and feel of the website completely by being able to 
         choose one of three different themes or styles for the entire site
-    -Everything must be created from scratch using original code in PHP/MySQL only
-    -Maintain a Trello board that contains a complete backlog of tasks, including who is assigned 
+Everything must be created from scratch using original code in PHP/MySQL only
+Maintain a Trello board that contains a complete backlog of tasks, including who is assigned 
         to do each one and a way to tract the status of 
         each (backlog, currently working on, completed, etc.)
