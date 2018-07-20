@@ -1,0 +1,21 @@
+Due: Aug 9th, Points: 100
+
+Description:
+For this lab, you are building a website that has a custom-built content management system (CMS). 
+
+Requirements:
+
+Should have at least three main category web pages (eg: Home, About, Contact), and four sub-category 
+    pages (About>History, About>Mission, Contact>Locations, Contact>Email)
+Admin:
+    -Login as admin on a separate page from the ones listed above
+    -Maintain a session so the admin can move to different web pages and keep credentials
+    -Add/Delete pages on the site as either main categories or sub-category, 
+        and have those pages be reflected in the menu system
+    -Edit content for each page in a user-friendly manner without ever having to mess with code
+    -Alter look and feel of the website completely by being able to 
+        choose one of three different themes or styles for the entire site
+    -Everything must be created from scratch using original code in PHP/MySQL only
+    -Maintain a Trello board that contains a complete backlog of tasks, including who is assigned 
+        to do each one and a way to tract the status of 
+        each (backlog, currently working on, completed, etc.)
