@@ -19,3 +19,13 @@ Everything must be created from scratch using original code in PHP/MySQL only
 Maintain a Trello board that contains a complete backlog of tasks, including who is assigned 
         to do each one and a way to tract the status of 
         each (backlog, currently working on, completed, etc.)
+
+
+Tables needed:
+    -Pages:
+        >title
+        >content
+        >url
+        >parent page(?)
+        >
+    -Users(?)
