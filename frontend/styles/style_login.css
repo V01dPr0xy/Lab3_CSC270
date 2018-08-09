@@ -1,0 +1,11 @@
+.div {
+    text-align: center;
+    border: 10;
+    border-color: black;
+}
+
+.submit_form {
+    text-align: center;
+    align-content: center;
+    margin: 300;
+}
