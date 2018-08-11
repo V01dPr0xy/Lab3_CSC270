@@ -5,7 +5,8 @@ include 'dbconfig.php';
 $query = "update pages 
 set
 Name = '".$mysqli->real_escape_string($_POST['PageName'])."',
-Page = '<p>".$mysqli->real_escape_string($_POST['PageText'])."</p>'
+Page = '<p>".$mysqli->real_escape_string($_POST['PageText'])."</p>''
+Header_ID = '".$mysqli->real_escape_string($_POST['HeaderId'])."'
 where ID ='".$mysqli->real_escape_string($_POST['id'])."'";
 //execute the query
 if( $mysqli->query($query) ) {

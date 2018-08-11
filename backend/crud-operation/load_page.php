@@ -20,6 +20,7 @@ $row = $result->fetch_assoc();
 //assign the result to certain variable so our html form will be filled up with values
 $page = $row['Page'];
 $name = $row['Name'];
+$header = $row['Header_ID'];
 $id = $row['ID'];
 
 
@@ -31,6 +32,11 @@ echo "</form>";
 echo "</br>";
 echo "</br>";
 
+cho "Header Id: ";
+echo "</br>";
+echo "<form action='PageUpdate.php' method='post'>";
+echo "<input type='text' name='HeaderId' value='".$header."' style='font-size:20;'>";
+echo "</br>";
 echo "Page Name: ";
 echo "</br>";
 echo "<form action='PageUpdate.php' method='post'>";
