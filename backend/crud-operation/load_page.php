@@ -42,7 +42,7 @@ $page= str_replace("</p>","",$page);
 echo "</br>";
 echo "</br>";
 
-echo "Page Text: <div><textarea rows='15' cols='50' name='PageText' wrap='hard'>$page</textarea></div>";
+echo "Page Text: <div><textarea rows='15' cols='150' name='PageText' wrap='hard'>$page</textarea></div>";
 echo "<input type='hidden' value=PageText.value>";
 echo "<input type='hidden' name='id' value= ".$id.">";
 echo "<input type='submit' value='Submit'>";
