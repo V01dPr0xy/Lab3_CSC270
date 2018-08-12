@@ -21,8 +21,5 @@
   </head>
   <body>
     <?php include '../reusable_code/reusable_navbar.php'; ?>
-    <p>Placeholder</p>
-    <p>Placeholder</p>
-    <p>Placeholder</p>
   </body>
 </html>

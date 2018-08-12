@@ -1,14 +1,14 @@
 <?php include 'header.php'; ?>
 
 <?php 
-include 'PageList.php';
+include '../reusable_code/reusable_navbar.php';
 //include database connection
-include 'dbconfig.php';
+include '../dbconfig.php';
 
 //select the specific database record to update
 $query = "select *
 from pages
-where id='9'
+where id='".$mysqli->real_escape_string($_REQUEST['id'])."'
 limit 0,1";
 
 //execute the query

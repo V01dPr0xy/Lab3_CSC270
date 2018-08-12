@@ -1,9 +1,9 @@
 <?php include 'header.php'; ?>
 
 <?php 
-include 'PageList.php';
+include '../reusable_code/reusable_navbar.php';
 //include database connection
-include 'dbconfig.php';
+include '../dbconfig.php';
 
 //select the specific database record to update
 $query = "select *
@@ -23,8 +23,11 @@ $name = $row['Name'];
 $header = $row['Header_ID'];
 $id = $row['ID'];
 
+echo "<form action='add_page.php' method='post'>";
+echo "<input type='submit' value='Add Page'>";
+echo "</form>";
 
-echo "<form action='DeletePage.php' method='delete'>";
+echo "<form action='delete_page.php' method='delete'>";
 echo "<input type='hidden' name='id' value= ".$id.">";
 echo "<input type='submit' value='Delete Page'>";
 echo "</form>";
@@ -32,15 +35,17 @@ echo "</form>";
 echo "</br>";
 echo "</br>";
 
-cho "Header Id: ";
-echo "</br>";
-echo "<form action='PageUpdate.php' method='post'>";
-echo "<input type='text' name='HeaderId' value='".$header."' style='font-size:20;'>";
-echo "</br>";
+// echo "Header_ID: ";
+// echo "</br>";
+// echo "<form action='update_page.php' method='post'>";
+// echo "<input type='text' name='HeaderId' value='".$header."' style='font-size:20;'>";
+// echo "</br>";
 echo "Page Name: ";
 echo "</br>";
-echo "<form action='PageUpdate.php' method='post'>";
+echo "<form action='update_page.php' method='post'>";
 echo "<input type='text' name='PageName' value='".$name."' style='font-size:20;'>";
+echo "Header_ID";
+echo "<input type='text' name='HeaderId' value='".$header."' style='font-size:20;'>";
 $page= str_replace("<p>","",$page);
 $page= str_replace("</p>","",$page);
 
