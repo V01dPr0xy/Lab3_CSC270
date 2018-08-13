@@ -1,6 +1,7 @@
 <?php
   include '../crud-operation/header.php';
-  include '../reusable_code/reusable_navbar.php';
-  <p>Welcome to our home</p>
+?>
+<p>Welcome to our home</p>
+<?php
   include '../crud-operation/footer.php';
 ?>

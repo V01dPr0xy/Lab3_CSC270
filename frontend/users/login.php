@@ -6,6 +6,7 @@
 </head>
 
 <body>
+    <?php include '../reusable_code/reusable_navbar.php'; ?>
     <div>
         <form class='submit_form' id="login_form" action="../../backend/users/login_submit.php" method="post">
             Username:  

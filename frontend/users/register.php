@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <?php include '../reusable_code/reusable_navbar.php'; ?>
     <div>
         <form class='submit_form' id="register_form" action="../../backend/users/register_submit.php" method="post">
             Username:  

@@ -1,7 +1,6 @@
 <?php include 'header.php'; ?>
 
 <?php 
-include '../reusable_code/reusable_navbar.php';
 //include database connection
 include '../dbconfig.php';
 
