@@ -1,7 +1,3 @@
-<?php
-    // include "../reusable_code/reusable_navbar.php";
-
-    session_start();
-
-    include "../backend/users/admin_edit.php";
-?>
+<?php include __DIR__ . "/../backend/sections/header.php"; ?>
+<p>Welcome to our home</p>
+<?php include __DIR__ . "/../backend/sections/footer.php"; ?>

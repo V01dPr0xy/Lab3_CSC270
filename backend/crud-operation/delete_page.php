@@ -1,6 +1,6 @@
 <?php 
 //include database connection
-include 'dbconfig.php';
+include __DIR__ . '/../dbconfig.php';
 
 //$mysqli->real_escape_string() function helps us prevent attacks such as SQL injection
 $query = "DELETE FROM pages WHERE ID = '".$mysqli->real_escape_string($_GET['id'])."'";

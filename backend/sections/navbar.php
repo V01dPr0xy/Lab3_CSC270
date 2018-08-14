@@ -1,7 +1,6 @@
-
 <div class="navbar">
+  <?php include __DIR__ . "/../dbconfig.php"; ?>
   <?php
-    include "../dbconfig.php";
     $query = "select * from header";
     $result = $mysqli->query($query);
     $num_results = $result->num_rows;
@@ -18,7 +17,7 @@
         if ($num_results > 0){
           while ($row2 = $result2->fetch_assoc()) {
             extract($row2);
-            echo "<a href='../crud-operation/load_page.php?id={$ID}'>".$Name."</a>";
+            echo "<a href='../../backend/crud-operation/load_page.php?id={$ID}'>".$Name."</a>";
             }
           echo "</div>";
         }
@@ -42,5 +41,10 @@
       </form>
     </div>
   </div>
-  <a id="login" href="../users/login.php">Log in</a>
+  <!--Check if the user is logged in-->
+  <?php 
+    
+  ?>
+
+  <a id="login" href="users/login.php">Log in</a>
 </div>

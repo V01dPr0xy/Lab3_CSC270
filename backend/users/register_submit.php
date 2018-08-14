@@ -1,6 +1,6 @@
 <?php
     //Include file to read from the database
-    include "../dbconfig.php";
+    include __DIR__ . "/../dbconfig.php";
     //check for credentials - $_POST must be used instead of $_GET, as it is unsafe
 
     //Query to be executed
@@ -40,7 +40,7 @@
         else
         {
             echo "Passwords do not match";
-            include "../../frontend/users/register.php";
+            include __DIR__ . "/../../frontend/users/register.php";
             exit();
             //If the password fails, but the username succeeds -> reload the login page with an error message
         }
@@ -49,7 +49,7 @@
     {
         //If the username fails -> reload the login page with an error message
         echo "Username already exists; please choose a different one";
-        include "../../frontend/users/register.php";
+        include __DIR__ . "/../../frontend/users/register.php";
     }
 
     $result->free();

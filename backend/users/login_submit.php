@@ -1,6 +1,6 @@
 <?php
     //Include file to read from the database
-    include "../dbconfig.php";
+    include __DIR__ . "/../dbconfig.php";
     //check for credentials - $_POST must be used instead of $_GET, as it is unsafe
 
     //Query to be executed
@@ -39,7 +39,7 @@
         else
         {
             echo "Password failed";
-            include "../../frontend/users/login.php";
+            include __DIR__ . "/../../frontend/users/login.php";
             exit;
             //If the password fails, but the username succeeds -> reload the login page with an error message
         }
@@ -48,7 +48,7 @@
     {
         //If the username fails -> reload the login page with an error message
         echo "Username does not exist, or is misspelled.";
-        include "../../frontend/users/login.php";
+        include __DIR__ . "/../../frontend/users/login.php";
     }
 
     //echo an hmtl file here - it's only boilerplate code

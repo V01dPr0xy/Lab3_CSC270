@@ -1,8 +1,8 @@
-<?php include 'header.php'; ?>
+<?php include __DIR__ . 'header.php'; ?>
 
 <?php 
 //include database connection
-include '../dbconfig.php';
+include __DIR__ . '/../dbconfig.php';
 
 //select the specific database record to update
 $query = "select *
@@ -28,4 +28,4 @@ $result->free();
 $mysqli->close();
 ?>
 
-<?php include 'footer.php'; ?>
+<?php include __DIR__ . 'footer.php'; ?>
