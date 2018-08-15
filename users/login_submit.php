@@ -32,14 +32,14 @@
             $keys = array_keys($kollectiv);
             $_SESSION['admin_access'] = $kollectiv[$keys[3]];
             //Direct the user to the home/index page
-            header("Location: /../lab3_index.php");
+            header("Location: ../index.php");
             // header("Location: ../../backend/crud-operation/load_page.php");
             exit;
         }
         else
         {
-            echo "Password failed";
             include "/../users/login.php";
+            echo "Password failed";
             exit;
             //If the password fails, but the username succeeds -> reload the login page with an error message
         }

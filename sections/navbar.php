@@ -50,7 +50,7 @@
     </div>
   </div>
   <!--Check if the user is logged in-->
-  <?php include "../users/login_control.php";?>
+  <?php include "/../users/login_control.php";?>
   <?php 
     if(empty($_SESSION['username']))
     {
