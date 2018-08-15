@@ -66,6 +66,11 @@ input {
   display: block;
 }
 
-#login {
+#log {
   float: right;
+}
+
+#btn_edit{
+  float: right;
+  vertical-align: middle;
 }
