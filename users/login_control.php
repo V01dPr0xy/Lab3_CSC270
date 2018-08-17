@@ -13,10 +13,11 @@
                     });
                 </script>
             </div>";  
+            $_SESSION['logged_in'] = 1;
         }
                       
     }
     else{
-        
+        $_SESSION['logged_in'] = 0;
     }
 ?>

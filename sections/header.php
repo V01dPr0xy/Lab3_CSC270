@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php 
+  // if (session_status() == PHP_SESSION_ACTIVE){
+  //   session_start();
+  // }
+  // echo session_status();
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,16 +16,6 @@
   <link type="text/css" rel="stylesheet" href="../styles/style_login">
   <style>
     <?php
-    if($_SESSION['theme'] == "light"){
-      include "../styles/light_theme.css";
-    }
-    else if($_SESSION['theme'] == "dark"){
-      include '../styles/dark_theme.css';
-    }
-    else if($_SESSION['theme'] == "summer"){
-      include '../styles/summer_theme.css';
-    }
-    
     if (isset($_POST['light_theme'])){
       include "../styles/light_theme.css";
       $_SESSION['theme'] = "light";
@@ -31,6 +27,15 @@
     else if (isset($_POST['summer_theme'])){
       include '../styles/summer_theme.css';
       $_SESSION['theme'] = "summer";
+    }
+    else if($_SESSION['theme'] == "light"){
+      include "/../styles/light_theme.css";
+    }
+    else if($_SESSION['theme'] == "dark"){
+      include '/../styles/dark_theme.css';
+    }
+    else if($_SESSION['theme'] == "summer"){
+      include '/../styles/summer_theme.css';
     }
     else {
       include '../styles/light_theme.css';

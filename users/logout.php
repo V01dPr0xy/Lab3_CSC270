@@ -1,7 +1,16 @@
 <?php
-    $_SESSION['username'] == "";
-    $_SESSION['admin_access'] == 0;
+    // session_unset();
+    $_SESSION = array();
+
+    if (ini_get("session.use_cookies")) {
+        $params = session_get_cookie_params();
+        setcookie(session_name(), '', time() - 42000,
+        $params["path"], $params["domain"],
+        $params["secure"], $params["httponly"]
+    );
+    }
+
     session_destroy();
 
-    header("Location: /../lab3_index.php");
+    header("Location: ../home/lab3_index.php");
 ?>

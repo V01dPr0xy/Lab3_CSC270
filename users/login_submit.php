@@ -7,6 +7,7 @@
     $query = "Select id, username, password, isadmin
             From `users`
             Where username = '".$mysqli->real_escape_string($_POST['username'])."'
+            AND password = '".$mysqli->real_escape_string($_POST['password'])."'
             limit 0,1";
 
     //execute the query
@@ -14,41 +15,33 @@
 
     if($result->num_rows == 1)
     {
-        if($_POST['password'] == $password)
+        //If both succeeds  
+        $kollectiv = $result->fetch_assoc();
+
+        if(session_status() == PHP_SESSION_NONE)
         {
-            //If both succeeds  
-            $kollectiv = $result->fetch_assoc();
-
-            if(session_status() == PHP_SESSION_NONE)
-            {
-                session_start();
-            }
-            else
-            {
-                echo "Session start failed";
-            }
-
-            $_SESSION['current_username'] = $_POST['username'];
-            $keys = array_keys($kollectiv);
-            $_SESSION['admin_access'] = $kollectiv[$keys[3]];
-            //Direct the user to the home/index page
-            header("Location: ../index.php");
-            // header("Location: ../../backend/crud-operation/load_page.php");
-            exit;
+            session_start();
         }
         else
         {
-            include "/../users/login.php";
-            echo "Password failed";
-            exit;
-            //If the password fails, but the username succeeds -> reload the login page with an error message
+            echo "Session start failed";
         }
+
+        $_SESSION['current_username'] = $_POST['username'];
+        $keys = array_keys($kollectiv);
+        $_SESSION['admin_access'] = $kollectiv[$keys[3]];
+        $_SESSION['logged_in'] = 1;
+        //Direct the user to the home/index page
+        header("Location: ../home/lab3_index.php");
+        // header("Location: ../../backend/crud-operation/load_page.php");
+        exit;  
     }
     else
     {
-        //If the username fails -> reload the login page with an error message
-        echo "Username does not exist, or is misspelled.";
-        include "/../users/login.php";
+        include "login.php";
+        echo "Incorrect username and/or password.";
+        exit;
+        //If the password fails, but the username succeeds -> reload the login page with an error message
     }
 
     //echo an hmtl file here - it's only boilerplate code

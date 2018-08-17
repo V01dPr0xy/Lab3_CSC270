@@ -50,9 +50,9 @@
     </div>
   </div>
   <!--Check if the user is logged in-->
-  <?php include "/../users/login_control.php";?>
-  <?php 
-    if(empty($_SESSION['username']))
+  <?php //include "/../users/login_control.php";?>
+  <?php
+    if(empty($_SESSION['logged_in']))
     {
       echo '<a id="log" href="../users/login.php">Log in</a>';
     }
