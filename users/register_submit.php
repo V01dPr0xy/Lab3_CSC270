@@ -32,7 +32,7 @@
 
             if( $mysqli->query($query) ) {
                 //if saving success
-                header("Location: ../lab3_index.php");
+                header("Location: ../home/lab3_index.php");
             }
 
             //Direct the user to the home/index page

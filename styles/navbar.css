@@ -66,11 +66,10 @@ input {
   display: block;
 }
 
-#log {
+a#register {
   float: right;
 }
 
-#btn_edit{
+a#login {
   float: right;
-  vertical-align: middle;
 }

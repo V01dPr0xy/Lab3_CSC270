@@ -21,6 +21,9 @@
               if ($_SESSION['admin_access']){
                 echo "<a href='../crud-operation/load_page.php?id={$ID}'>".$Name."</a>";
               }
+              else {
+                echo "<a href='../crud-operation/load_userpage.php?id={$ID}'>".$Name."</a>";
+              }
             }
             else{
               echo "<a href='../crud-operation/load_userpage.php?id={$ID}'>".$Name."</a>";
@@ -54,11 +57,12 @@
   <?php
     if(empty($_SESSION['logged_in']))
     {
-      echo '<a id="log" href="../users/login.php">Log in</a>';
+      echo '<a id="login" href="../users/login.php">Log in</a>';
+      echo '<a id="register" href="../users/register.php">Register</a>';
     }
     else
     {
-      echo '<a id="log" href="../users/logout.php">Log out</a>';
+      echo '<a id="login" href="../users/logout.php">Log out</a>';
     }
   ?>  
 </div>

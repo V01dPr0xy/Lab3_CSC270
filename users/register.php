@@ -1,4 +1,4 @@
-<?php include include __DIR__ . '/../sections/navbar.php'; ?>
+<?php include '../sections/header.php'; ?>
 <div>
     <form class='submit_form' id="register_form" action="../users/register_submit.php" method="post">
         Username:  
@@ -18,3 +18,4 @@
         <br />
     </form>
 </div>
+<?php include '../sections/footer.php'; ?>
